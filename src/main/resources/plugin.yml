@@ -1,0 +1,8 @@
+name: xAbilities
+version: 0.3
+main: services.xenlan.xabilities.xAbilities
+author: LBuddyBoy
+
+commands:
+  ability:
+    description: give a specific ability item to yourself or others.
