@@ -17,11 +17,4 @@ public class chatUtil {
         return strings;
     }
 
-    public static List<String> colorLines( List<String> lore) {
-        List<String> color = new ArrayList<String>();
-        for ( String s : lore) {
-            color.add(chat(s));
-        }
-        return color;
-    }
 }

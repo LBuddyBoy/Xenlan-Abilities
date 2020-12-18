@@ -10,7 +10,6 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -46,13 +45,14 @@ public class AgroPearl implements Listener {
 
         Player p = event.getPlayer();
 
-        Inventory i;
-
 
         if (!event.getAction().name().contains("RIGHT"))
             return;
 
         if (event.getItem() == null)
+            return;
+
+        if (!item.isSimilar(p.getItemInHand()))
             return;
 
         if (item.isSimilar(p.getItemInHand())) {
